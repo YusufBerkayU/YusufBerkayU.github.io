@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Survey - HW 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f5; 
+            padding: 20px;
+            color: #333;
+        }
+        
+        .form-container {
+            background-color: white;
+            width: 650px;
+            margin: 0 auto; 
+            padding: 30px;
+            border: 2px solid #888;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label.title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .radio-check-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Music Survey</h1>
+
+    <form action="http://www.uyar.com/teaching/ecc006/2017spring/login.php" method="POST">
+
+        <div class="input-group">
+            <label class="title" for="name">Name:</label>
+            <input type="text" id="name" name="student_name">
+        </div>
+
+        <div class="input-group">
+            <label class="title" for="email">E-Mail:</label>
+            <input type="email" id="email" name="student_email">
+        </div>
+
+        <fieldset class="radio-check-group">
+            <legend>Select Your Favorite Types of Music:</legend>
+            <label><input type="checkbox" name="music_type" value="Pop"> Pop</label>
+            <label><input type="checkbox" name="music_type" value="Classical"> Classical</label>
+            <label><input type="checkbox" name="music_type" value="Rock"> Rock</label>
+            <label><input type="checkbox" name="music_type" value="Folk"> Folk</label>
+            <label><input type="checkbox" name="music_type" value="Rap"> Rap</label>
+            <label><input type="checkbox" name="music_type" value="Other"> Other</label>
+        </fieldset>
+
+        <fieldset class="radio-check-group">
+            <legend>Select how often you purchase Music CDs:</legend>
+            <label><input type="radio" name="purchase_freq" value="Weekly"> Weekly</label>
+            <label><input type="radio" name="purchase_freq" value="Few CDs"> A few CDs each year</label>
+            <label><input type="radio" name="purchase_freq" value="Monthly"> Monthly</label>
+            <label><input type="radio" name="purchase_freq" value="Never"> Never purchase</label>
+        </fieldset>
+
+        <div class="input-group">
+            <label class="title" for="locations">Select the locations you listen to Music:</label>
+            <select id="locations" name="listen_location" size="3">
+                <option value="Home">At home</option>
+                <option value="Car">In the car</option>
+                <option value="Anywhere">Anywhere (MP3 Player)</option>
+                <option value="Work">At work</option>
+                <option value="Concerts">At live concerts</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label class="title" for="music_role">What role does music play in your life?</label>
+            <textarea id="music_role" name="music_role" cols="60" rows="3"></textarea>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
